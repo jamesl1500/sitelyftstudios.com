@@ -1,0 +1,219 @@
+@import 'main';
+
+.innerWebsite{
+  height: auto;
+  background: #fff;
+
+  .topBanner{
+    background: url(https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?auto=format&fit=crop&w=2672&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: bottom;
+
+    height: 300px;
+
+    .cover{
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0,0,0, .4);
+
+      .inner{
+
+        h3{
+          color: white;
+
+          font-size: 4.5em;
+          font-weight: 400;
+
+          text-align: left;
+
+          margin-top: 80px;
+        }
+
+        .divide{
+          width: 150px;
+          height: 2px;
+
+          background: #fff;
+
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        h4{
+          font-size: 1.2em;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .bottomArea{
+  	background: white;
+  	height: 100%;
+		
+    .innerBottomArea{
+	  
+      .firstAboutInfo{
+      	padding: 45px;
+      
+      	.inner{
+      		
+          h3{
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #AAB2BD;
+            font-weight: 600;
+            margin-bottom: 30px;
+          }
+
+          p{
+            line-height: 1.6em;
+            font-size: 20px;
+          }
+        }
+      }
+      
+      .secondAboutInfo{
+      	padding: 45px;
+      
+      	.inner{
+
+      		h3{
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #AAB2BD;
+            font-weight: 600;
+            margin-bottom: 30px;
+          }
+
+          p{
+            line-height: 1.6em;
+            font-size: 20px;
+          }
+
+          .highlight{
+            margin-left: 20px;
+
+            .innerHighlight{
+
+              ul{
+                margin-top: 20px;
+
+                li{
+                  list-style-type: disc;
+                  margin-bottom: 10px;
+                  line-height: 1.6em;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .thirdAboutInfo{
+        background: url(https://images.unsplash.com/photo-1496114992386-fb40d80d1daf?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+        background-size: cover;
+        background-position: center;
+        height: auto;
+
+        @media screen and (max-width: 767px)
+        {
+          height: auto;
+        }
+
+        .cover{
+          height: auto;
+          width: 100%;
+
+          @media screen and (max-width: 767px)
+          {
+            height: 100%;
+          }
+
+          background: rgba(0,0,0,.6);
+
+          padding: 25px;
+
+          .inner{
+
+            .leftProfileImage{
+              padding-left: 0px;
+
+              @media screen and (max-width: 767px)
+              {
+                float: none;
+                margin: 0% auto;
+              }
+
+              img{
+                box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+                border: 7px solid white;
+
+                width: 100%;
+                height: auto;
+
+                border-radius: 2px;
+              }
+            }
+
+            .rightInfo{
+              @media screen and (max-width: 767px)
+              {
+                padding-left: 0px;
+                padding-top: 10px;
+              }
+
+              .topInfo{
+
+                h3{
+                  font-size: 2em;
+                  font-weight: bold;
+
+                  color: white;
+
+                  @media screen and (max-width: 767px)
+                  {
+                    text-align: center;
+                  }
+
+                  span{
+                    font-weight: 300;
+                    color: white;
+                  }
+                }
+              }
+
+              .bottomInfo{
+
+                p{
+                  font-size: 1.5em;
+                  font-weight: 400;
+
+                  line-height: 1.4em;
+
+                  @media screen and (max-width: 767px)
+                  {
+                    font-size: 1.2em;
+                    font-weight: 400;
+
+                    text-align: center;
+                  }
+
+                  color: white;
+
+                  padding-top: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

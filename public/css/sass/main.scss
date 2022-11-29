@@ -1,0 +1,442 @@
+// Vars
+$primaryFont: 'Lato', sans-serif;
+$primaryTextColor: #333;
+
+$primaryColor: #673ab7;
+
+@import 'bootstrap';
+@import 'Reset';
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  background: white;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Website Body
+.websiteBody{
+  width: 100%;
+  //height: 100vh;
+
+  background: white;
+
+  position: relative;
+  z-index: 1000001;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+// Sidebar
+.sidebarMain{
+  width: 300px;
+
+
+  @media screen and (max-width: 340px)
+  {
+    width: 260px;
+  }
+
+  background: white;
+
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0px;
+  right: 0px;
+
+  z-index: 10000;
+
+  .innerSidebar{
+    width: 80%;
+
+    margin: 0% auto;
+
+    background: white;
+    height: 100%;
+
+    .topHead{
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      img{
+        height: 55px;
+      }
+
+      h3{
+        padding-top: 20px;
+        font-weight: 500;
+        font-size: 1.2em;
+
+        color: #333;
+
+        text-decoration: none;
+      }
+    }
+
+    .bottomMenu{
+      padding-top: 25px;
+
+      ul{
+
+        li{
+          padding-bottom: 25px;
+
+          a{
+            color: #acacad;
+            font-size: 1.2em;
+
+
+          }
+
+          a:hover{
+            color: #333;
+          }
+        }
+
+        li.special{
+          padding: 13px;
+
+          display: inline-block;
+          margin-right: 2px;
+
+          border: 2px solid $primaryColor;
+          border-radius: 3px;
+
+          padding-right: 15px;
+          padding-left: 15px;
+
+          width: 100%;
+          text-align: center;
+
+          a {
+            color: $primaryColor;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.subheader{
+  background: $primaryColor;
+  padding: 15px;
+
+  //margin-bottom: 25px;
+
+  .innerSubHeader{
+    padding: 0px;
+
+    .leftContact{
+
+      ul{
+        margin: 0px;
+        padding: 0px;
+
+        li{
+          display: inline;
+          margin: 0px;
+          padding: 0px;
+
+          margin-right: 15px;
+
+          a{
+            color: white;
+            font-weight: 400;
+
+            text-decoration: none;
+
+            i{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Header
+.mainHeader{
+  width: 100%;
+  height: 100px;
+
+  //margin-top: 20px;
+
+  .innerMainHeader{
+    padding: 0px;
+
+    @media screen and (max-width: 840px)
+    {
+      padding: 15px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .leftBranding{
+      padding-top: 25px;
+      padding-left: 0px;
+
+      a {
+        text-decoration: none;
+
+        img {
+          height: 50px;
+          float: left;
+        }
+
+        h3 {
+          margin-left: 60px;
+          padding-top: 13px;
+
+          text-decoration: none;
+
+          color: #333;
+
+          font-size: 1.2em;
+          font-weight: 600;
+
+          @media screen and (max-width: 991px) {
+            padding-top: 4px;
+          }
+
+          @media screen and (max-width: 534px) {
+            //display: none;
+          }
+        }
+      }
+    }
+
+    .rightMenu{
+      padding-right: 0px;
+
+      .innerMenu{
+        padding-top: 27px;
+
+        @media screen and (max-width: 840px)
+        {
+          position: relative;
+          top: -1px;
+        }
+
+        ul{
+          float: right;
+
+          .mobileHide {
+            display: inline-block;
+
+            @media screen and (max-width: 840px)
+            {
+              display: none;
+            }
+
+            li {
+              padding: 13px;
+              padding-right: 8px;
+              padding-left: 8px;
+
+              display: inline-block;
+              margin-right: 2px;
+
+              a {
+                font-size: 1em;
+                font-weight: 400;
+
+                color: rgb(172, 172, 173);
+
+                text-decoration: none;
+                padding-bottom: 5px;
+
+                transition: all 0.5s ease;
+
+              }
+
+              a:hover {
+                color: $primaryColor;
+              }
+            }
+          }
+
+          li.special{
+            padding: 13px;
+
+            display: inline-block;
+            margin-right: 2px;
+
+            border: 2px solid $primaryColor;
+            border-radius: 3px;
+
+            padding-right: 15px;
+            padding-left: 15px;
+
+            margin-left: 10px;
+
+            a {
+              color: $primaryColor;
+              text-decoration: none;
+            }
+          }
+
+          li.mobileSidebarOpen{
+            display: none;
+
+            @media screen and (max-width: 840px)
+            {
+              display: inline-block;
+            }
+
+            font-size: 2em;
+
+            color: #333;
+
+            padding-left: 13px;
+
+            position: relative;
+            top: 5px;
+
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottomWebsite {
+  width: 100%;
+
+  // Pre-Footer
+  .preFooter {
+    background: $primaryColor;
+    padding: 13px;
+
+    .innerFooter {
+      text-align: center;
+
+      a {
+        padding-bottom: 6px;
+
+        color: white;
+
+        font-size: 1.4em;
+        font-weight: 400;
+
+        display: inline-block;
+
+        border-bottom: 1px solid white;
+
+        text-decoration: none;
+
+      }
+    }
+  }
+  // Footer
+  .footer{
+    background: lighten($primaryColor, 2%);
+    height: auto;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .topMainFooterArea{
+      padding-left: 0px;
+      padding-right: 0px;
+
+      padding-bottom: 20px;
+
+      .leftMainInfo{
+        padding: 0px;
+
+        @media screen and (max-width: 767px)
+        {
+          text-align: center;
+        }
+
+        .topArea{
+          padding-bottom: 15px;
+
+          h3{
+            color: white;
+
+            font-size: 1.5em;
+            font-weight: 700;
+          }
+        }
+
+        .bottomArea{
+
+          ul{
+
+            li{
+              color: white;
+              padding-bottom: 6px;
+
+              a{
+                color: white;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottomCopyright{
+      padding-top: 20px;
+
+      padding-left: 0px;
+      padding-right: 0px;
+
+      border-top: 1px solid rgba(0,0,0,.1);
+
+      .leftCopyright{
+        padding-left: 0px;
+        padding-right: 0px;
+
+        h3{
+          color: white;
+
+          @media screen and (max-width: 767px)
+          {
+            text-align: center;
+          }
+        }
+      }
+
+      .rightCopyright{
+        padding-right: 0px;
+        padding-left: 0px;
+
+        h3{
+          float: right;
+          color: white;
+
+          @media screen and (max-width: 767px)
+          {
+            float: none;
+            text-align: center;
+
+            padding-top: 5px;
+          }
+
+          a{
+            color: white;
+            text-decoration: underline !important;
+          }
+        }
+      }
+    }
+  }
+}
